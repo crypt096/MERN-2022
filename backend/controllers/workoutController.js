@@ -58,6 +58,8 @@ const updateWorkout = async (req, res) => {
   if(!workout) {
     return res.status(404).json({ error: 'Workout not found' });
   }
+
+  res.status(200).json(workout);
 }
 
 // Delete workout
