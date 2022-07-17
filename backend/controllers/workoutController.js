@@ -8,6 +8,7 @@ const Workout = require('../models/workout');
 const createWorkout = async (req, res) => {
   const { title, load, reps } = req.body;
 
+  // Add doc to db
   try {
     const workout = await Workout.create({
       title,
