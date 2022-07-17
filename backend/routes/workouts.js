@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
       title,
       load,
       reps
-    })
+    }) 
     res.status(200).json(workout);
   } catch (error) {
     res.status(400).json({ error: error.message });
