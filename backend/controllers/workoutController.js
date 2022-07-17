@@ -1,4 +1,5 @@
 const Workout = require('../models/workoutModel');
+const mongoose = require('mongoose');
 
 // Get all workouts
 const getWorkouts = async (req, res) => {
@@ -19,6 +20,8 @@ const getWorkout = async (req, res) => {
   if(!workout) {
     return res.status(404).json({ error: 'Workout not found' });
   }
+
+  res.status(200).json(workout);
 }
 
 // Create workout
