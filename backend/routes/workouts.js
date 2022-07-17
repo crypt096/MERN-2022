@@ -16,4 +16,14 @@ router.post('/', (req, res) => {
   res.json({mssg: 'POST new workout'});
 })
 
+// UPDATE a workout
+router.patch('/:id', (req, res) => {
+  res.json({mssg: 'UPDATE a workout'});
+})
+
+// DELETE a workout
+router.post('/:id', (req, res) => {
+  res.json({mssg: 'DELETE a workout'});
+})
+
 module.exports = router;
