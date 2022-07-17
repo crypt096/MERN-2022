@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Workout = require('../models/WorkoutModel');
+const Workout = require('../models/workoutModel');
 
 // Get ALL workouts
 router.get('/', (req, res) => {
