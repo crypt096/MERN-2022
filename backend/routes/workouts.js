@@ -3,14 +3,15 @@ const router = express.Router();
 const { 
   createWorkout,
   getWorkouts,
-  getWorkout
+  getWorkout,
+  deleteWorkout
 } = require('../controllers/workoutController');
 
 // Get ALL workouts
 router.get('/', getWorkouts);
 
 // GET singe workout
-router.get('/:id', getWorkout);
+router.get('/:id', getWorkout); 
 
 // POST new workout
 router.post('/', createWorkout);
