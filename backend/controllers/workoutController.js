@@ -1,6 +1,14 @@
-const Workout = require('../models/workout');
+const Workout = require('../models/workoutModel');
 
 // Get all workouts
+const getWorkouts = async (req, res) => {
+  try {
+    const workouts = await Workout.find();
+    res.status(200).json(workouts);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+}
 
 // Get single workout
 
