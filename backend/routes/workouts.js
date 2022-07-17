@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', () => {})
+// Get ALL workouts
+router.get('/', (req, res) => {
+  res.json({mssg: 'GET All workouts'});
+})
 
 module.exports = router;
