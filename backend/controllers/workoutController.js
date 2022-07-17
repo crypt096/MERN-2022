@@ -53,6 +53,10 @@ const updateWorkout = async (req, res) => {
 // Delete workout
 const deleteWorkout = async (req, res) => {
   const { id } = req.params;
+
+  if(!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(400).json({ error: 'Workout not found' });
+  }
 }
 
 module.exports = {
