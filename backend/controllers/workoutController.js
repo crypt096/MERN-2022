@@ -47,7 +47,7 @@ const createWorkout = async (req, res) => {
   }
 
   if(emptyFields.length > 0) {
-    return res.status(400).json({ error: `Missing ${emptyFields.join(', ')}` });
+    return res.status(400).json({ error: `Missing ${emptyFields.join(', ')}` }); 
   }
 
   // Add doc to db
