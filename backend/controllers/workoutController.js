@@ -47,7 +47,7 @@ const createWorkout = async (req, res) => {
 
 // Update workout
 const updateWorkout = async (req, res) => {
-  
+  // const workout = await Workout.findById(req.params.id);
 }
 
 // Delete workout
