@@ -13,8 +13,18 @@ router.get('/:id', (req, res) => {
 })
 
 // POST new workout
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   const { title, load, reps } = req.body;
+
+  try {
+    const workout = await Workout.create({
+      title,
+      load,
+      reps
+    })
+  } catch (error) {
+    
+  }
 
   res.json({mssg: 'POST new workout'});
 })
