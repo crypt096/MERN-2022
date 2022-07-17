@@ -16,7 +16,11 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/workouts', workoutRoutes);
 
-// Server listening
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
-})
+// Connect to db
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is running on port ${process.env.PORT}`);
+    });
+  })
+  .catch(err => console.log(err));
