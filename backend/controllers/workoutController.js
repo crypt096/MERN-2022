@@ -46,6 +46,9 @@ const createWorkout = async (req, res) => {
 }
 
 // Update workout
+const updateWorkout = async (req, res) => {
+  
+}
 
 // Delete workout
 
