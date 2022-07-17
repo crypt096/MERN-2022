@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Workout = require('../models/workoutModel');
+const { createWorkout } = require('../controllers/workoutController');
 
 // Get ALL workouts
 router.get('/', (req, res) => {
@@ -13,7 +13,7 @@ router.get('/:id', (req, res) => {
 })
 
 // POST new workout
-router.post('/', creteWorkout);
+router.post('/', createWorkout);
 
 // UPDATE a workout
 router.patch('/:id', (req, res) => {
