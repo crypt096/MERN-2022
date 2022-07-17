@@ -22,7 +22,7 @@ router.patch('/:id', (req, res) => {
 })
 
 // DELETE a workout
-router.post('/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   res.json({mssg: 'DELETE a workout'});
 })
 
