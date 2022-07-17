@@ -26,8 +26,6 @@ router.post('/', async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
-
-  res.json({mssg: 'POST new workout'});
 })
 
 // UPDATE a workout
