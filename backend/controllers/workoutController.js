@@ -24,3 +24,7 @@ const createWorkout = async (req, res) => {
 // Update workout
 
 // Delete workout
+
+module.exports = {
+  createWorkout
+}
