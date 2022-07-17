@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Workout = require('../models/Workout');
 
 // Get ALL workouts
 router.get('/', (req, res) => {
@@ -14,7 +15,7 @@ router.get('/:id', (req, res) => {
 // POST new workout
 router.post('/', (req, res) => {
   const { title, load, reps } = req.body;
-  
+
   res.json({mssg: 'POST new workout'});
 })
 
