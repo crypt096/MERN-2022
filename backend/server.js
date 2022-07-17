@@ -20,7 +20,7 @@ app.use('/api/workouts', workoutRoutes);
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(process.env.PORT, () => {
-      console.log(`Server is running on port ${process.env.PORT}`);
+      console.log(`Connected to DB and server is running on port ${process.env.PORT}`);
     });
   })
   .catch(err => console.log(err));
