@@ -52,6 +52,8 @@ const updateWorkout = async (req, res) => {
   if(!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).json({ error: 'Workout not found' });
   }
+
+  const workout = await Workout.findOneAndUpdate({ _id: id }, {...req.body});
 }
 
 // Delete workout
